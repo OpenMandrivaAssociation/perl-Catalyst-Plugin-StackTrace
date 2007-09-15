@@ -4,7 +4,7 @@
 
 %define version 0.06
 
-%define	rel	1
+%define	rel	2
 %define release %mkrel %{rel}
 
 Summary:	Display a stack trace on the debug screen
