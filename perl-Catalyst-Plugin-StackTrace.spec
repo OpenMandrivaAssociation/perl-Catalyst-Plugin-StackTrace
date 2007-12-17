@@ -22,7 +22,6 @@ BuildRequires:	perl(Catalyst) >= 5.61
 BuildRequires:	perl(Devel::StackTrace)
 BuildRequires:	perl(Module::Build)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This plugin will enhance the standard Catalyst debug screen by
