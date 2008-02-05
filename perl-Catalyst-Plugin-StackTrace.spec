@@ -2,9 +2,9 @@
 %define name	perl-%{module}
 %define	modprefix Catalyst
 
-%define version 0.06
+%define version 0.07
 
-%define	rel	2
+%define	rel	1
 %define release %mkrel %{rel}
 
 Summary:	Display a stack trace on the debug screen
@@ -38,15 +38,15 @@ This plugin is only active in -Debug mode.
 %setup -q -n %{module}-%{version}
 
 %build
-%__perl Build.PL installdirs=vendor
-./Build
+%__perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-./Build test
+%__make test
 
 %install
 %{__rm} -rf %{buildroot}
-./Build install destdir=%{buildroot}
+%makeinstall_std
 
 %clean
 %{__rm} -rf %{buildroot}
