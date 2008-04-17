@@ -53,7 +53,7 @@ This plugin is only active in -Debug mode.
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes
 %{_mandir}/*/*
 %{perl_vendorlib}/%{modprefix}
 
