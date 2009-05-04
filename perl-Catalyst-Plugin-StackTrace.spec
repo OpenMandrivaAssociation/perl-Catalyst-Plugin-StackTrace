@@ -3,9 +3,7 @@
 %define	modprefix Catalyst
 
 %define version 0.10
-
-%define	rel	1
-%define release %mkrel %{rel}
+%define release %mkrel 1
 
 Summary:	Display a stack trace on the debug screen
 Name:		%{name}
@@ -14,13 +12,11 @@ Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
 BuildRequires:	perl(Catalyst) >= 5.61
 BuildRequires:	perl(Devel::StackTrace)
 BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(MRO::Compat)
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
@@ -38,7 +34,7 @@ This plugin is only active in -Debug mode.
 %setup -q -n %{module}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor --skipdeps
 %make
 
 %check
