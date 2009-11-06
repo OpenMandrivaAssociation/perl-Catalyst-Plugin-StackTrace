@@ -1,5 +1,5 @@
 %define upstream_name    Catalyst-Plugin-StackTrace
-%define upstream_version 0.10
+%define upstream_version 0.11
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
