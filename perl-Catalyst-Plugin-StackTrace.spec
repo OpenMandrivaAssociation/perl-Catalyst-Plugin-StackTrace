@@ -1,15 +1,15 @@
 %define upstream_name    Catalyst-Plugin-StackTrace
-%define upstream_version 0.11
+%define upstream_version 0.12
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Display a stack trace on the debug screen
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Catalyst/Catalyst-Plugin-StackTrace-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Catalyst) >= 5.61
@@ -44,4 +44,5 @@ make test
 %doc Changes
 %{_mandir}/*/*
 %{perl_vendorlib}/Catalyst
+
 

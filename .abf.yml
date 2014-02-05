@@ -1,2 +1,4 @@
+removed_sources:
+  Catalyst-Plugin-StackTrace-0.11.tar.gz: f34198ec57928538ae7ef6fe052cc95382d3eea4
 sources:
-  "Catalyst-Plugin-StackTrace-0.11.tar.gz": f34198ec57928538ae7ef6fe052cc95382d3eea4
+  Catalyst-Plugin-StackTrace-0.12.tar.gz: 0058e3b92be401bcb0cc4029236f85fd43fabd47
