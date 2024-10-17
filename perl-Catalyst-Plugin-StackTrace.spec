@@ -8,7 +8,7 @@ Release:	3
 Summary:	Display a stack trace on the debug screen
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}/
+URL:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Catalyst/Catalyst-Plugin-StackTrace-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
