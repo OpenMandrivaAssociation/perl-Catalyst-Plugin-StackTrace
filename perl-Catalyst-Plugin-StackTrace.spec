@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-Plugin-StackTrace
-%define upstream_version 0.12
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	0.12
+Release:	4
 
 Summary:	Display a stack trace on the debug screen
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/Catalyst-Plugin-StackTrace-%{upstream_version}.tar.gz
+URL:		https://metacpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Catalyst/Catalyst-Plugin-StackTrace-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ number.
 This plugin is only active in -Debug mode.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor --skipdeps
